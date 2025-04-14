@@ -1,190 +1,155 @@
 body {
-    background: url(https://www.shutterstock.com/image-vector/poker-green-table-background-vector-600nw-2402279537.jpg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    
-  }
-  
-  h1{
-    font-size: 3rem;
-    margin: 0;
-    font-family:cursive ;
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    margin-top: -15px;
-  }
-  
-  .card {
-    position: relative;
-    
-    background-color: rgb(255, 255, 255);
-    border-radius: 20px;
-    display: grid;
-    grid-template-rows: auto,auto,auto;
-    padding: 10px;
-    border: 1px solid rgb(6, 6, 6);
-  }
-  
-  #icon {
-    font-size: 8rem;
-    justify-self: start;
-    align-self: start;
-  }
-  
-  #number {
-    font-size: 7rem;
-    text-align: center;
-    margin: 0;
-    align-self: center;
-  }
-  
-  #secondIcon {
-    font-size: 8rem;
-    justify-self: end;
-    align-self: end;
-  }
-  
-  button {
-    border-radius: 10px;
-    border: 2px solid grey;
-    font-size: 1rem;
-    font-family:cursive ;
-
-    background: rgb(212, 26, 26);
-
-    color: white;
-    width: 260px;
-    height: 50px;
-    
-  }
-  
-  button:hover{
-    background: rgb(88, 2, 2);
-    cursor: pointer;
-  }
-
-  img{
-    height: 20px;
-    width: 20px;
-  }
-
-  button:hover img {
-    animation: rotation 1s infinite linear;
-
-  }
-
-
-  @keyframes rotation{
-    from{
-        transform: rotate(0);
-    }
-    to{
-        transform: rotate(360deg);
-    }
-  }
-  
-  .inputs{
-    display: block;
-
-  }
-
-  .card::after {
-    content: "";
-    position: absolute;
-    transform: rotate(15deg);
-    
-    left: 150px;
-    width: 342px;
-    height: 535px;
-    
-    z-index: -1;
-    background: url(./assets/img/Card\ backside.png);
-    background-size:cover;         
-    background-position: center;    
-
-
-    border-radius: 20px;
-    padding: 10px;
-    border: 1px solid rgb(6, 6, 6);
-  }
-
-  .card::before {
-    content: "";
-    position: absolute;
-    transform: rotate(-15deg);
-    
-    right: 150px;
-    width: 342px;
-    height: 535px;
-    
-    z-index: -1;
-    background: url(./assets/img/Card\ backside.png);
-    background-size:cover;         
-    background-position: center;    
-
-
-    border-radius: 20px;
-    padding: 10px;
-    border: 1px solid rgb(6, 6, 6);
-  }
-  
-  .card2 {
-    content: "";
-    position: absolute;
-    left: 714px;
-    top: 266px; 
-    width: 342px;
-    height: 535px;
-    
-    z-index: 0;
-    background: url(./assets/img/Card\ backside.png);
-    background-size:cover;         
-    background-position: center;    
-
-
-    border-radius: 20px;
-    padding: 10px;
-    border: 1px solid rgb(6, 6, 6);
-  }
-  
-  .divInput{
-    display: flex;
-    gap: 20px;
-    justify-content: center; 
-    align-items: center; 
-   
+  background: url(https://www.shutterstock.com/image-vector/poker-green-table-background-vector-600nw-2402279537.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
-   
-  
-  .miniDiv{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.card {
+  position: relative;
+  background-color: white;
+  border-radius: 20px;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  padding: 10px;
+  border: 1px solid black;
+  font-size: 10px; /* Base para que los íconos escalen con em */
+  width: 342px;
+  height: 535px;
+  z-index: 1;
+}
+
+.card2::before {
+  content: "";
+  position: absolute;
+  transform: rotate(-15deg);
+  top: 30px;
+  right: 200px;
+  width: 95%;
+  height: 100%;
+  background: url(./assets/img/Card\ backside.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  border: 1px solid rgb(6, 6, 6);
+  z-index: -1;
+}
+
+.card2::after {
+  content: "";
+  position: absolute;
+  transform: rotate(15deg);
+  top: 30px;
+  left: 200px; 
+  width: 95%;
+  height: 100%;
+  background: url(./assets/img/Card\ backside.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  border: 1px solid rgb(6, 6, 6);
+  z-index: -1;
+}
+
+
+#icon,
+#secondIcon {
+  font-size: 10em;
+  justify-self: start;
+  align-self: start;
+}
+
+#secondIcon {
+  justify-self: end;
+  align-self: end;
+}
+
+#number {
+  font-size: 9em;
+  text-align: center;
+  margin: 0;
+  align-self: center;
+}
+
+button {
+  border-radius: 10px;
+  border: 2px solid grey;
+  font-size: 1rem;
+  background: rgb(212, 26, 26);
+  color: white;
+  width: 260px;
+  height: 50px;
+  font-family: cursive;
+}
+
+button:hover {
+  background: rgb(88, 2, 2);
+  cursor: pointer;
+}
+
+img {
+  height: 20px;
+  width: 20px;
+}
+
+button:hover img {
+  animation: rotation 1s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
   }
- .inputs{
-   
-    width: 170px;
-    height: 22px;
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-    background: rgb(2, 68, 2);
-    border: 1px solid black;
-    border-radius: 5px;
+.inputs {
+  width: 170px;
+  height: 22px;
+  background: rgb(2, 68, 2);
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px auto 30px;
+  color: white;
+  text-align: center;
+}
 
-    margin-left: 5px;
-    margin-right: 5px;
-    margin-bottom: 30px;
+.labelText {
+  font-family: cursive;
+  text-align: center;
+  color: white;
+}
 
- }
- .labelText{
-    font-family: cursive;
-    text-align: center;
+.divInput {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
 
- }
+.card2 {
+  display: inline;
+  position: absolute;
+  width: 342px;
+  height: 535px;
+  left: 714px;
+  top: 266px;
+  background: url(./assets/img/Card\ backside.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid black;
+  z-index: 0;
+}
