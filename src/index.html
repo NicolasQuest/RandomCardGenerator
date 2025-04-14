@@ -1,53 +1,46 @@
+
+
 <!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" href="./assets/img/4geeks.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Random Card Generator</title>
-
-  <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-  <div class="container">
-    <h1>Random Card Generator</h1>
-    <button id="randomizerButton">
-      <img
-        src="https://png.pngtree.com/png-vector/20220726/ourmid/pngtree-jester-head--smiling-joker-png-image_6083011.png"
-        alt="joker">
-      Generate a Random Card
-      <img
-        src="https://png.pngtree.com/png-vector/20220726/ourmid/pngtree-jester-head--smiling-joker-png-image_6083011.png"
-        alt="joker">
-    </button>
-    <div class="divInput">
-      <div class="miniDiv">
-        <label class="labelText" for="width">Width:</label>
-        <input class="inputs" type="text" name="width" id="width" placeholder="Write & press ⏎ to change ">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Card Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Random Card Generator</h1>
+      <button id="randomizerButton">
+        <img
+          src="https://png.pngtree.com/png-vector/20220726/ourmid/pngtree-jester-head--smiling-joker-png-image_6083011.png"
+          alt="joker"
+        />
+        Generate a Random Card
+        <img
+          src="https://png.pngtree.com/png-vector/20220726/ourmid/pngtree-jester-head--smiling-joker-png-image_6083011.png"
+          alt="joker"
+        />
+      </button>
+      <div class="divInput">
+        <div class="miniDiv">
+          <label class="labelText" for="width">Width:</label>
+          <input class="inputs" type="text" id="width" placeholder="e.g. 300px" />
+        </div>
+        <div class="miniDiv">
+          <label class="labelText" for="height">Height:</label>
+          <input class="inputs" type="text" id="height" placeholder="e.g. 500px" />
+        </div>
       </div>
-      <div class="miniDiv"> 
-        <label  class="labelText" for="width">Height</label>
-        <input class="inputs" type="text" name="height" id="height" placeholder="Write & press ⏎ to change ">
+
+      <div class="card2"></div>
+      <div class="card" style="width: 342px; height: 535px;">
+        <span id="icon"></span>
+        <p id="number"></p>
+        <span id="secondIcon"></span>
       </div>
     </div>
 
-    <div class="card2"></div>
-    <div class="card" style="height: 535px; width:342px;">
-      <span id="icon"></span>
-      <p id="number"> </p>
-      <span id="secondIcon"></span>
-
-    </div>
-  </div>
-
-
-
-
-  <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
-  <script type="module" src="/app.js"></script>
-</body>
-
+    <script src="app.js"></script>
+  </body>
 </html>
